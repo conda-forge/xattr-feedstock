@@ -1,8 +1,8 @@
 {% set name = "xattr" %}
-{% set version = "0.9.2" %}
+{% set version = "0.9.3" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "3bbf13c2c9283a52c5dee5586a120e010217ab4e835ccfcfcabe8b22eb1f66e7" %}
+{% set hash = "cd010284c816bad19d271f33c14666583669455779d3f7cb0047f4368e49f80b" %}
 {% set build = 0 %}
 
 package:
@@ -19,7 +19,7 @@ build:
   entry_points:
     - xattr = xattr.tool:main
 
-  number: {{ build }}
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
