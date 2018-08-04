@@ -1,8 +1,8 @@
 {% set name = "xattr" %}
-{% set version = "0.9.3" %}
+{% set version = "0.9.4" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "cd010284c816bad19d271f33c14666583669455779d3f7cb0047f4368e49f80b" %}
+{% set hash = "eec15abe558ea6363c6bf4b7c40c8924f7be65b7a5d251c93e0a1278d8481bbe" %}
 {% set build = 0 %}
 
 package:
