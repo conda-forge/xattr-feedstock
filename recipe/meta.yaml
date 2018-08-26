@@ -27,7 +27,7 @@ requirements:
     
   host:
     - python
-    - setuptools
+    - pip
     - cffi >=1.0.0
 
   run:
