@@ -3,7 +3,6 @@
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
 {% set hash = "7cb1b28eeab4fe99cc4350e831434142fce658f7d03f173ff7722144e6a47458" %}
-{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +10,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash }}
 
 build:
@@ -20,13 +19,15 @@ build:
     - xattr = xattr.tool:main
 
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    
+  host:
     - python
     - setuptools
-    - toolchain
     - cffi >=1.0.0
 
   run:
