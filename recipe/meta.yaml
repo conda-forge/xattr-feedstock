@@ -1,7 +1,7 @@
 {% set name = "xattr" %}
-{% set version = "0.9.7" %}
+{% set version = "0.9.9" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "b0bbca828e04ef2d484a6522ae7b3a7ccad5e43fa1c6f54d78e24bb870f49d44" %}
+{% set hash = "09cb7e1efb3aa1b4991d6be4eb25b73dc518b4fe894f0915f5b0dcede972f346" %}
 
 package:
   name: {{ name|lower }}
@@ -13,17 +13,17 @@ source:
   sha256: {{ hash }}
 
 build:
-  skip: True  # [win]
+  skip: true  # [win]
   entry_points:
     - xattr = xattr.tool:main
 
-  number: 3
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   build:
     - {{ compiler('c') }}
-    
+
   host:
     - python
     - pip
@@ -45,7 +45,7 @@ about:
   license_file: LICENSE.txt
   license: MIT
   license_family: MIT
-  summary: 'Python wrapper for extended filesystem attributes'
+  summary: Python wrapper for extended filesystem attributes
   dev_url: https://github.com/xattr/xattr
 
 extra:
