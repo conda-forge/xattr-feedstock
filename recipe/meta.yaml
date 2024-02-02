@@ -1,7 +1,7 @@
 {% set name = "xattr" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "a2c7cb2ef441bf679e240b65e205f08a3ee315e190fea5673e60fd6812e634a5" %}
+{% set hash = "fecbf3b05043ed3487a28190dec3e4c4d879b2fcec0e30bafd8ec5d4b6043630" %}
 
 package:
   name: {{ name|lower }}
