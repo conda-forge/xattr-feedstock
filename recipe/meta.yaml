@@ -27,12 +27,11 @@ requirements:
     - cffi                                   # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
-
   host:
     - python
     - pip
     - cffi >=1.0.0
-
+    - setuptools
   run:
     - python
     - cffi >=1.0.0
