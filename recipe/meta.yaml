@@ -17,7 +17,7 @@ build:
   entry_points:
     - xattr = xattr.tool:main
 
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
@@ -26,12 +26,12 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cffi                                   # [build_platform != target_platform]
     - {{ compiler('c') }}
-
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
     - cffi >=1.0.0
-
+    - setuptools
   run:
     - python
     - cffi >=1.0.0
