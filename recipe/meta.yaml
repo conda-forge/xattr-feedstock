@@ -1,7 +1,7 @@
 {% set name = "xattr" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.4" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "fecbf3b05043ed3487a28190dec3e4c4d879b2fcec0e30bafd8ec5d4b6043630" %}
+{% set hash = "b7b02ecb2270da5b7e7deaeea8f8b528c17368401c2b9d5f63e91f545b45d372" %}
 
 package:
   name: {{ name|lower }}
@@ -17,7 +17,7 @@ build:
   entry_points:
     - xattr = xattr.tool:main
 
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
